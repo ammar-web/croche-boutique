@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Crochet Boutique | Handcrafted Elegance (@croche_boutiq)</title>
+  <meta name="description" content="Exclusive handcrafted crochet boutique by @croche_boutiq. Bespoke crochet bags, winter scarves, baby rompers, beach outfits and accessories crafted with love.">
+  
+  <!-- Favicon using real profile avatar -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile_avatar.jpg">
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+  <!-- Dynamic Ambient Glowing Orbs for Glassmorphism Reflections -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+    <div class="aurora-orb orb-4"></div>
+    <div class="aurora-orb orb-5"></div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar glass-bar">
+    <div class="container announcement-content">
+      <span><i class="fa-brands fa-instagram"></i> Official Web Boutique for <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener">@croche_boutiq</a> &bull; Handcrafted with Soft Premium Yarn</span>
+      <div class="announcement-right">
+        <span class="badge-mini"><i class="fa-solid fa-sparkles"></i> 100% Genuine Instagram Creations</span>
+        <span class="delivery-pill"><i class="fa-solid fa-truck-fast"></i> Worldwide Shipping Available</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar (Glassmorphism) -->
+  <header class="navbar-wrapper">
+    <nav class="navbar glass-panel">
+      <div class="nav-container">
+        <!-- Sidebar Toggle (Mobile / Tablet) -->
+        <button class="nav-toggle-btn glass-btn-icon" id="sidebarToggleBtn" aria-label="Toggle Navigation Sidebar">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+
+        <!-- Brand Logo & Instagram Tag -->
+        <a href="#home" class="brand-logo">
+          <div class="logo-avatar-wrap">
+            <img src="assets/images/profile_avatar.jpg" alt="@croche_boutiq profile" class="logo-avatar" onerror="this.src='images/profile_avatar.jpg'">
+            <span class="verified-dot" title="Verified Instagram Boutique"><i class="fa-solid fa-circle-check"></i></span>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">The Crochet Boutique</span>
+            <span class="brand-handle"><i class="fa-brands fa-instagram"></i> @croche_boutiq</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house-heart"></i> Home</a></li>
+          <li><a href="#shop" class="nav-link"><i class="fa-solid fa-bag-shopping"></i> Collection</a></li>
+          <li><a href="#categories" class="nav-link"><i class="fa-solid fa-layer-group"></i> Categories</a></li>
+          <li><a href="#insta-feed" class="nav-link"><i class="fa-brands fa-instagram"></i> Insta Feed</a></li>
+          <li><a href="#custom-order" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Custom Order</a></li>
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-heart"></i> Story</a></li>
+        </ul>
+
+        <!-- Right Action Controls -->
+        <div class="nav-actions">
+          <!-- Currency Selector -->
+          <div class="currency-picker glass-chip">
+            <i class="fa-solid fa-coins"></i>
+            <select id="currencySelector" aria-label="Select Currency">
+              <option value="INR" selected>₹ INR</option>
+              <option value="USD">$ USD</option>
+              <option value="EUR">€ EUR</option>
+              <option value="GBP">£ GBP</option>
+            </select>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="glass-btn-icon" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Light/Dark Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- Wishlist Button -->
+          <button class="glass-btn-icon action-with-badge" id="wishlistBtn" title="Your Wishlist" aria-label="Open Wishlist">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count" id="wishlistCount">0</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button class="glass-btn-icon action-with-badge primary-glow" id="cartBtn" title="Shopping Bag" aria-label="Open Cart Drawer">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="badge-count" id="cartCount">0</span>
+          </button>
+
+          <!-- Owner / Manager Studio Shortcut (Dynamic) -->
+          <button class="glass-btn owner-studio-btn hidden" id="studioQuickBtn">
+            <i class="fa-solid fa-crown"></i> <span>Studio Portal</span>
+          </button>
+
+          <!-- User Profile / Login Button -->
+          <button class="glass-btn user-btn" id="userAuthBtn">
+            <i class="fa-solid fa-circle-user"></i>
+            <span id="userAuthLabel">Login</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Glassmorphism Sidebar (Collapsible Drawer) -->
+  <aside class="sidebar glass-sidebar" id="appSidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <img src="assets/images/profile_avatar.jpg" alt="Profile" class="sidebar-avatar">
+        <div>
+          <h4>The Crochet Boutique</h4>
+          <p><i class="fa-brands fa-instagram"></i> @croche_boutiq</p>
+        </div>
+      </div>
+      <button class="close-sidebar-btn glass-btn-icon" id="closeSidebarBtn" aria-label="Close sidebar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Active User Role Card -->
+    <div class="sidebar-role-card glass-panel-sm" id="sidebarRoleCard">
+      <div class="role-badge" id="sidebarRoleBadge">
+        <i class="fa-solid fa-user"></i> <span>Browsing as Guest</span>
+      </div>
+      <p class="role-desc" id="sidebarRoleDesc">Login to place orders or manage boutique inventory.</p>
+      <button class="glass-btn-sm" id="sidebarLoginBtn">
+        <i class="fa-solid fa-right-to-bracket"></i> Login / Switch Account
+      </button>
+    </div>
+
+    <div class="sidebar-content">
+      <!-- Owner / Manager Portal Quick Links -->
+      <div class="sidebar-section owner-only hidden" id="sidebarOwnerSection">
+        <span class="sidebar-section-title"><i class="fa-solid fa-crown"></i> Boutique Management</span>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="javascript:void(0)" class="sidebar-link highlight-link" id="sidebarOpenStudioBtn">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>Upload Photos (Up to 50)</span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)" class="sidebar-link" id="sidebarManageCatalogBtn">
+              <i class="fa-solid fa-sliders"></i>
+              <span>Manage Products & Pricing</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="sidebar-section">
+        <span class="sidebar-section-title">Navigation</span>
+        <ul class="sidebar-menu">
+          <li><a href="#home" class="sidebar-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li><a href="#shop" class="sidebar-link"><i class="fa-solid fa-bag-shopping"></i> All Products</a></li>
+          <li><a href="#categories" class="sidebar-link"><i class="fa-solid fa-shapes"></i> Category Directory</a></li>
+          <li><a href="#insta-feed" class="sidebar-link"><i class="fa-brands fa-instagram"></i> Instagram Feed</a></li>
+          <li><a href="#custom-order" class="sidebar-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Custom Request</a></li>
+          <li><a href="#about" class="sidebar-link"><i class="fa-solid fa-circle-info"></i> About the Brand</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Category Filters -->
+      <div class="sidebar-section">
+        <span class="sidebar-section-title">Explore Collections</span>
+        <div class="sidebar-category-tags">
+          <button class="tag-btn" data-category="all"><i class="fa-solid fa-border-all"></i> All Items</button>
+          <button class="tag-btn" data-category="bags"><i class="fa-solid fa-bag-shopping"></i> Crochet Bags</button>
+          <button class="tag-btn" data-category="scarves"><i class="fa-solid fa-mitten"></i> Scarves & Beanies</button>
+          <button class="tag-btn" data-category="rompers"><i class="fa-solid fa-baby"></i> Baby Rompers</button>
+          <button class="tag-btn" data-category="beachwear"><i class="fa-solid fa-sun"></i> Beach & Tops</button>
+          <button class="tag-btn" data-category="accessories"><i class="fa-solid fa-gem"></i> Accessories</button>
+        </div>
+      </div>
+
+      <!-- Direct Instagram Link -->
+      <div class="sidebar-insta-banner glass-panel-sm">
+        <i class="fa-brands fa-instagram insta-icon-large"></i>
+        <h5>Follow on Instagram</h5>
+        <p>171+ Posts &bull; Handcrafted Creations</p>
+        <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener" class="glass-btn btn-insta">
+          Visit @croche_boutiq <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- MAIN APPLICATION CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-text-col">
+          <div class="hero-pill glass-chip">
+            <span class="pulse-dot"></span>
+            <span>Handmade With Love &bull; 100% Genuine Instagram Creations</span>
+          </div>
+          
+          <h1 class="hero-title">
+            ꧁ The Crochet <span class="gradient-text">Boutique</span> ꧂
+          </h1>
+          
+          <p class="hero-tagline">
+            Every stitch tells a story. Discover bespoke handcrafted crochet bags, cozy scarves, adorable baby rompers, and bohemian summerwear created with soft, premium yarn by <strong>@croche_boutiq</strong>.
+          </p>
+
+          <!-- Instagram Bio & Stats Badge -->
+          <div class="hero-stats-glass glass-panel">
+            <div class="stat-item">
+              <span class="stat-num">170+</span>
+              <span class="stat-label">Instagram Posts</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Handcrafted</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num">Custom</span>
+              <span class="stat-label">Made to Order</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#shop" class="btn-primary glass-btn-primary">
+              <i class="fa-solid fa-bag-shopping"></i> Explore Collection
+            </a>
+            <a href="#custom-order" class="btn-secondary glass-btn">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Request Custom Stitch
+            </a>
+            <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener" class="btn-insta-round glass-btn-icon" title="Instagram Profile">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero 3D Glass Image Card Stack (Original Instagram Photos) -->
+        <div class="hero-visual-col">
+          <div class="hero-glass-card-stack">
+            <!-- Background Glow -->
+            <div class="stack-glow"></div>
+            
+            <!-- Card 1: Main Highlight -->
+            <div class="hero-floating-card glass-panel card-primary">
+              <div class="card-img-wrap">
+                <img src="assets/images/croche_01.jpg" alt="Featured Crochet Creation from @croche_boutiq" id="heroMainImg" onerror="this.src='images/croche_01.jpg'">
+                <span class="card-badge-glass"><i class="fa-brands fa-instagram"></i> Authentic Post</span>
+              </div>
+              <div class="card-info">
+                <div class="card-meta">
+                  <span class="card-category">Bespoke Artisan Wear</span>
+                  <div class="card-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <h3 class="card-title">Handmade Bohemian Crochet Bag</h3>
+                <div class="card-price-row">
+                  <span class="card-price" data-base-price="1499">₹1,499</span>
+                  <button class="btn-add-quick glass-btn-sm" onclick="app.quickAddFromHero(1)">
+                    <i class="fa-solid fa-cart-plus"></i> Add
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge 1 -->
+            <div class="hero-mini-badge glass-panel badge-left">
+              <div class="badge-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div>
+                <strong>Soft Pure Yarn</strong>
+                <small>Hypoallergenic & Durable</small>
+              </div>
+            </div>
+
+            <!-- Floating Accent Badge 2 -->
+            <div class="hero-mini-badge glass-panel badge-right">
+              <img src="assets/images/croche_02.jpg" alt="Crochet preview" class="mini-thumb">
+              <div>
+                <strong>Winter Scarf & Set</strong>
+                <small>@croche_boutiq Original</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM STORY BUBBLE BAR -->
+    <section class="stories-bar-section">
+      <div class="container">
+        <div class="stories-wrapper glass-panel">
+          <div class="story-item active" data-category="all">
+            <div class="story-ring">
+              <img src="assets/images/profile_avatar.jpg" alt="All Collections">
+            </div>
+            <span>All Items</span>
+          </div>
+          <div class="story-item" data-category="bags">
+            <div class="story-ring">
+              <img src="assets/images/croche_01.jpg" alt="Bags">
+            </div>
+            <span>Totes & Bags</span>
+          </div>
+          <div class="story-item" data-category="scarves">
+            <div class="story-ring">
+              <img src="assets/images/croche_02.jpg" alt="Winter Wear">
+            </div>
+            <span>Winter Scarves</span>
+          </div>
+          <div class="story-item" data-category="rompers">
+            <div class="story-ring">
+              <img src="assets/images/croche_03.jpg" alt="Baby Rompers">
+            </div>
+            <span>Baby Rompers</span>
+          </div>
+          <div class="story-item" data-category="beachwear">
+            <div class="story-ring">
+              <img src="assets/images/croche_04.jpg" alt="Beach Outfits">
+            </div>
+            <span>Beachwear</span>
+          </div>
+          <div class="story-item" data-category="accessories">
+            <div class="story-ring">
+              <img src="assets/images/croche_05.jpg" alt="Accessories">
+            </div>
+            <span>Accessories</span>
+          </div>
+          <div class="story-item custom-story" onclick="app.openCustomOrderModal()">
+            <div class="story-ring plus-ring">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <span>Custom DM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SHOWCASE SECTION -->
+    <section class="categories-section" id="categories">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle glass-chip"><i class="fa-solid fa-sparkles"></i> Curated Selections</span>
+          <h2 class="section-title">Explore Handcrafted Categories</h2>
+          <p class="section-desc">Each category features signature handmade items straight from the @croche_boutiq Instagram collection.</p>
+        </div>
+
+        <div class="category-grid">
+          <!-- Card 1: Bags -->
+          <div class="cat-card glass-panel" data-cat="bags" onclick="app.filterByCategory('bags')">
+            <div class="cat-img-wrap">
+              <img src="assets/images/croche_01.jpg" alt="Crochet Bags" loading="lazy">
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-count">Signature Pieces</span>
+              <h3>Crochet Bags & Totes</h3>
+              <p>Chic everyday totes, sling bags, and floral market shoppers.</p>
+              <span class="cat-link">Browse Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card 2: Scarves & Winter -->
+          <div class="cat-card glass-panel" data-cat="scarves" onclick="app.filterByCategory('scarves')">
+            <div class="cat-img-wrap">
+              <img src="assets/images/croche_02.jpg" alt="Winter Scarves" loading="lazy">
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-count">Cozy Warmth</span>
+              <h3>Winter Warmers & Scarves</h3>
+              <p>Plush woolen mufflers, infinity loops, beanies and ear warmers.</p>
+              <span class="cat-link">Browse Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card 3: Baby Rompers -->
+          <div class="cat-card glass-panel" data-cat="rompers" onclick="app.filterByCategory('rompers')">
+            <div class="cat-img-wrap">
+              <img src="assets/images/croche_03.jpg" alt="Baby Rompers" loading="lazy">
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-count">Little Angels</span>
+              <h3>Baby Rompers & Sets</h3>
+              <p>Ultra-soft baby outfits, newborn photoshoot sets, and baby booties.</p>
+              <span class="cat-link">Browse Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <!-- Card 4: Beachwear & Tops -->
+          <div class="cat-card glass-panel" data-cat="beachwear" onclick="app.filterByCategory('beachwear')">
+            <div class="cat-img-wrap">
+              <img src="assets/images/croche_04.jpg" alt="Beach Outfits" loading="lazy">
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-count">Boho Chic</span>
+              <h3>Beach Outfits & Tops</h3>
+              <p>Hand-knitted summer halter tops, beach shrugs, and breezy cover-ups.</p>
+              <span class="cat-link">Browse Category <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP / PRODUCT CATALOG SECTION -->
+    <section class="shop-section" id="shop">
+      <div class="container">
+        <!-- Section Header with Search & Filter Bar -->
+        <div class="shop-header">
+          <div>
+            <span class="section-subtitle glass-chip"><i class="fa-solid fa-sparkles"></i> 100% Genuine Instagram Photos</span>
+            <h2 class="section-title">The Boutique Collection</h2>
+          </div>
+
+          <!-- Active Role Control Center (Owner/Manager Studio trigger) -->
+          <div class="shop-header-actions">
+            <button class="glass-btn btn-studio-highlight hidden" id="openUploadModalBtn">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>Upload New Photos (Limit: 50)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Glass Filter & Search Toolbar -->
+        <div class="filter-toolbar glass-panel">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search bags, scarves, rompers, colors..." aria-label="Search items">
+            <button id="clearSearchBtn" class="clear-btn hidden" aria-label="Clear search"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <div class="filter-pills-wrap">
+            <button class="filter-pill active" data-filter="all">All Items (<span id="countAll">0</span>)</button>
+            <button class="filter-pill" data-filter="bags">Bags & Totes</button>
+            <button class="filter-pill" data-filter="scarves">Winter Scarves</button>
+            <button class="filter-pill" data-filter="rompers">Baby Rompers</button>
+            <button class="filter-pill" data-filter="beachwear">Beachwear & Tops</button>
+            <button class="filter-pill" data-filter="accessories">Accessories</button>
+            <button class="filter-pill custom-filter" data-filter="uploaded">Owner Uploads</button>
+          </div>
+
+          <div class="sort-wrap">
+            <label for="sortSelector"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
+            <select id="sortSelector" class="glass-select" aria-label="Sort products">
+              <option value="featured">Featured / Best</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Alphabetical</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <!-- Empty Results Placeholder -->
+        <div class="empty-state glass-panel hidden" id="emptyState">
+          <i class="fa-solid fa-box-open empty-icon"></i>
+          <h3>No Handcrafted Creations Found</h3>
+          <p>Try searching for different terms or reset your filters.</p>
+          <button class="btn-primary glass-btn-primary" onclick="app.resetFilters()">
+            <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OWNER & MANAGER STUDIO PORTAL (UP TO 50 PICS UPLOAD AT A TIME) -->
+    <section class="studio-section hidden" id="studioPortalSection">
+      <div class="container">
+        <div class="studio-panel glass-panel">
+          <div class="studio-header">
+            <div class="studio-title-block">
+              <span class="role-chip"><i class="fa-solid fa-crown"></i> Store Owner & Manager Studio</span>
+              <h2>Add New Creations to the Webapp</h2>
+              <p>Upload new photos directly from your phone or PC. <strong>Upload limit: Up to 50 pictures at a time</strong>. Added items will immediately appear live in your boutique store!</p>
+            </div>
+            <button class="glass-btn-icon" id="closeStudioBtn" title="Close Studio Portal">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Studio Stats Bar -->
+          <div class="studio-stats-grid">
+            <div class="stat-card glass-panel-sm">
+              <div class="stat-icon"><i class="fa-solid fa-image"></i></div>
+              <div>
+                <span class="stat-title">Catalog Photos</span>
+                <h4 id="statTotalCatalog">0</h4>
+              </div>
+            </div>
+            <div class="stat-card glass-panel-sm">
+              <div class="stat-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+              <div>
+                <span class="stat-title">Owner Uploads</span>
+                <h4 id="statTotalUploads">0</h4>
+              </div>
+            </div>
+            <div class="stat-card glass-panel-sm">
+              <div class="stat-icon"><i class="fa-solid fa-tags"></i></div>
+              <div>
+                <span class="stat-title">Batch Limit</span>
+                <h4>Max 50 / batch</h4>
+              </div>
+            </div>
+            <div class="stat-card glass-panel-sm">
+              <div class="stat-icon"><i class="fa-solid fa-database"></i></div>
+              <div>
+                <span class="stat-title">Persistence</span>
+                <h4 class="text-success"><i class="fa-solid fa-circle-check"></i> LocalStorage Saved</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- 50-Image Upload Area -->
+          <div class="upload-zone-wrapper">
+            <div class="drop-zone glass-panel-sm" id="dropZone">
+              <input type="file" id="multiImageInput" multiple accept="image/*" class="file-input-hidden">
+              <div class="drop-zone-content">
+                <div class="upload-icon-circle pulse-slow">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h3>Drag & Drop Up to 50 Photos Here</h3>
+                <p>Or click anywhere to select pictures from your device</p>
+                <div class="upload-limit-badge">
+                  <i class="fa-solid fa-shield-halved"></i> Strictly limited to <strong>50 photos max</strong> per upload batch
+                </div>
+                <button type="button" class="btn-primary glass-btn-primary" onclick="document.getElementById('multiImageInput').click()">
+                  <i class="fa-solid fa-folder-open"></i> Browse Files
+                </button>
+              </div>
+            </div>
+
+            <!-- Upload File Counter & Warning Alert -->
+            <div class="upload-status-alert hidden" id="uploadAlert">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span id="uploadAlertText"></span>
+            </div>
+
+            <!-- Staged Images Preview Container -->
+            <div class="staged-uploads-container hidden" id="stagedContainer">
+              <div class="staged-header">
+                <h4>
+                  <i class="fa-solid fa-images"></i> Staged Pictures 
+                  <span class="badge-pill" id="stagedCountBadge">0 / 50</span>
+                </h4>
+                <div class="staged-actions">
+                  <button type="button" class="glass-btn-sm text-danger" id="clearStagedBtn">
+                    <i class="fa-solid fa-trash-can"></i> Clear All
+                  </button>
+                </div>
+              </div>
+
+              <!-- Batch Metadata Settings -->
+              <div class="batch-settings-panel glass-panel-sm">
+                <h5><i class="fa-solid fa-pen-ruler"></i> Batch Item Details (Applies to all staged photos)</h5>
+                <div class="form-row-grid">
+                  <div class="form-group">
+                    <label for="batchTitle">Item Name / Title Prefix:</label>
+                    <input type="text" id="batchTitle" class="glass-input" placeholder="e.g. Handmade Pastel Crochet Tote">
+                  </div>
+                  <div class="form-group">
+                    <label for="batchCategory">Category:</label>
+                    <select id="batchCategory" class="glass-select">
+                      <option value="bags">Crochet Bags & Totes</option>
+                      <option value="scarves">Winter Scarves & Beanies</option>
+                      <option value="rompers">Baby Rompers & Sets</option>
+                      <option value="beachwear">Beach Outfits & Tops</option>
+                      <option value="accessories">Accessories & Trinkets</option>
+                      <option value="custom">Bespoke Custom Stitch</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="batchPrice">Price (₹ INR):</label>
+                    <input type="number" id="batchPrice" class="glass-input" placeholder="e.g. 1299" min="50" step="10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="batchDesc">Description / Care Notes:</label>
+                  <textarea id="batchDesc" class="glass-input textarea-sm" placeholder="Hand-knitted with love by @croche_boutiq. 100% soft acrylic/cotton yarn..."></textarea>
+                </div>
+              </div>
+
+              <!-- Live Preview Grid of Staged Images -->
+              <div class="staged-grid" id="stagedGrid">
+                <!-- Staged thumbnails rendered here -->
+              </div>
+
+              <!-- Submit Button -->
+              <div class="staged-footer">
+                <button type="button" class="btn-primary glass-btn-primary btn-large" id="publishBatchBtn">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <span>Publish <span id="publishCountText">0</span> Pictures to Boutique Catalog</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Catalog Management Table for Owner -->
+          <div class="manage-inventory-wrapper">
+            <div class="inventory-header">
+              <h3><i class="fa-solid fa-list-check"></i> Manage Current Products</h3>
+              <div class="inventory-controls">
+                <button class="glass-btn-sm" id="exportCatalogBtn" title="Export catalog as JSON backup">
+                  <i class="fa-solid fa-download"></i> Backup Catalog
+                </button>
+                <button class="glass-btn-sm" id="resetCatalogBtn" title="Reset to original 23 Instagram photos">
+                  <i class="fa-solid fa-rotate-left"></i> Reset to Default
+                </button>
+              </div>
+            </div>
+            <div class="inventory-table-wrap glass-panel-sm">
+              <table class="inventory-table" id="inventoryTable">
+                <thead>
+                  <tr>
+                    <th>Photo</th>
+                    <th>Product Title</th>
+                    <th>Category</th>
+                    <th>Base Price</th>
+                    <th>Source</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM LIVE FEED SHOWCASE SECTION -->
+    <section class="insta-feed-section" id="insta-feed">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle glass-chip"><i class="fa-brands fa-instagram"></i> Direct from Instagram</span>
+          <h2 class="section-title">Follow Our Craft on @croche_boutiq</h2>
+          <p class="section-desc">Every piece featured below is an authentic post directly from our friend's Instagram boutique account.</p>
+        </div>
+
+        <div class="insta-gallery-grid" id="instaGalleryGrid">
+          <!-- Rendered with authentic Instagram images -->
+        </div>
+
+        <div class="insta-footer-banner text-center">
+          <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener" class="btn-primary glass-btn-primary">
+            <i class="fa-brands fa-instagram"></i> Follow @croche_boutiq on Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESPOKE CUSTOM ORDER SECTION -->
+    <section class="custom-order-section" id="custom-order">
+      <div class="container">
+        <div class="custom-order-glass glass-panel">
+          <div class="custom-content-col">
+            <span class="section-subtitle glass-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Personalized Creations</span>
+            <h2>Want a Custom Crochet Creation?</h2>
+            <p>
+              Looking for a custom color combination, specific baby romper sizing, customized bag dimensions, or an intricate pattern you saw on Pinterest?
+            </p>
+            <div class="custom-features-list">
+              <div class="feat-item">
+                <i class="fa-solid fa-palette"></i>
+                <div>
+                  <strong>Your Choice of Colors</strong>
+                  <span>Pastels, earth tones, vibrant hues, or dual-shades.</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <i class="fa-solid fa-ruler-combined"></i>
+                <div>
+                  <strong>Custom Sizing & Measurements</strong>
+                  <span>Perfect fit for babies, teens, or bespoke adult bags.</span>
+                </div>
+              </div>
+              <div class="feat-item">
+                <i class="fa-solid fa-paper-plane"></i>
+                <div>
+                  <strong>Direct DM on Instagram</strong>
+                  <span>Send your reference photo directly to <strong>@croche_boutiq</strong>.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="custom-form-col">
+            <form id="customOrderForm" class="custom-order-form glass-panel-sm">
+              <h3><i class="fa-solid fa-feather-pointed"></i> Request a Bespoke Quote</h3>
+              
+              <div class="form-group">
+                <label for="custName">Your Name:</label>
+                <input type="text" id="custName" class="glass-input" required placeholder="e.g. Priya Sharma">
+              </div>
+
+              <div class="form-row-grid">
+                <div class="form-group">
+                  <label for="custEmail">Email or Phone:</label>
+                  <input type="text" id="custEmail" class="glass-input" required placeholder="contact@domain.com">
+                </div>
+                <div class="form-group">
+                  <label for="custType">Product Type:</label>
+                  <select id="custType" class="glass-select">
+                    <option value="bag">Crochet Bag / Tote</option>
+                    <option value="scarf">Winter Scarf / Beanie</option>
+                    <option value="romper">Baby Romper / Newborn Set</option>
+                    <option value="beach">Beachwear / Crop Top</option>
+                    <option value="accessory">Accessories / Keychain</option>
+                    <option value="other">Other Bespoke Idea</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="custColor">Preferred Color Palette:</label>
+                <input type="text" id="custColor" class="glass-input" placeholder="e.g. Sage green + Cream white, or Baby pink">
+              </div>
+
+              <div class="form-group">
+                <label for="custDetails">Special Instructions & Sizing:</label>
+                <textarea id="custDetails" class="glass-input textarea-sm" required placeholder="Describe your dream creation or reference an Instagram post from @croche_boutiq..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary glass-btn-primary full-width">
+                <i class="fa-solid fa-paper-plane"></i> Send Custom Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THE ARTISAN & BRAND -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-glass-card glass-panel">
+          <div class="about-image-col">
+            <div class="artisan-badge-card">
+              <img src="assets/images/profile_avatar.jpg" alt="@croche_boutiq Artisan" class="artisan-avatar" onerror="this.src='images/profile_avatar.jpg'">
+              <div class="artisan-stamp">
+                <i class="fa-solid fa-seedling"></i>
+                <span>Handmade with Love</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text-col">
+            <span class="section-subtitle glass-chip"><i class="fa-solid fa-heart"></i> Behind the Stitches</span>
+            <h2>The Story of @croche_boutiq</h2>
+            <p>
+              Welcome to <strong>The Crochet Boutique</strong>. What began as an artistic passion for intertwining soft yarn with intricate needlework has blossomed into an exclusive boutique business on Instagram.
+            </p>
+            <p>
+              Unlike mass-manufactured fast fashion, every single handbag, muffler, beach cover-up, and baby romper in our collection is crafted by hand, stitch by meticulous stitch. We source hypoallergenic, skin-friendly, high-grade yarns that guarantee softness, warmth, and enduring beauty.
+            </p>
+            <div class="artisan-guarantees">
+              <div class="guarantee-chip"><i class="fa-solid fa-hands-holding-heart"></i> 100% Handcrafted</div>
+              <div class="guarantee-chip"><i class="fa-solid fa-feather"></i> Soft Skin-Safe Yarn</div>
+              <div class="guarantee-chip"><i class="fa-solid fa-truck-ramp-box"></i> Secure Custom Packaging</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FROSTED GLASS FOOTER -->
+  <footer class="footer-section">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <img src="assets/images/profile_avatar.jpg" alt="Logo" class="footer-avatar">
+          <div>
+            <h3>The Crochet Boutique</h3>
+            <span>@croche_boutiq on Instagram</span>
+          </div>
+        </div>
+        <p>Handmade boutique apparel, artisanal bags, warm winter wear, and bespoke baby wear. Made with patience, love, and fine yarn.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener" class="social-icon-btn" title="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://ig.me/m/croche_boutiq" target="_blank" rel="noopener" class="social-icon-btn" title="Send Direct Message"><i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Boutique Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#shop" onclick="app.filterByCategory('bags')">Crochet Bags & Totes</a></li>
+          <li><a href="#shop" onclick="app.filterByCategory('scarves')">Scarves & Beanies</a></li>
+          <li><a href="#shop" onclick="app.filterByCategory('rompers')">Baby Rompers & Sets</a></li>
+          <li><a href="#shop" onclick="app.filterByCategory('beachwear')">Beachwear & Tops</a></li>
+          <li><a href="#shop" onclick="app.filterByCategory('accessories')">Handmade Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul class="footer-links">
+          <li><a href="#custom-order">Custom Orders & DM</a></li>
+          <li><a href="javascript:void(0)" onclick="app.openCareGuideModal()">Yarn & Washing Guide</a></li>
+          <li><a href="javascript:void(0)" onclick="app.openShippingModal()">Shipping & Delivery</a></li>
+          <li><a href="javascript:void(0)" onclick="app.openAuthModal()">Owner / Manager Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Instagram Connect</h4>
+        <p>Catch daily stitch highlights, behind-the-scenes reels, and customer unboxings.</p>
+        <a href="https://www.instagram.com/croche_boutiq/" target="_blank" rel="noopener" class="btn-primary glass-btn-primary btn-sm">
+          <i class="fa-brands fa-instagram"></i> @croche_boutiq
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 The Crochet Boutique (@croche_boutiq). All rights reserved. Handcrafted with &hearts;.</p>
+        <div class="footer-role-status" id="footerRoleStatus">
+          <span>Role: Guest</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & DRAWERS ================= -->
+
+  <!-- 1. AUTHENTICATION / LOGIN / ROLE MODAL -->
+  <div class="modal-overlay hidden" id="authModal">
+    <div class="modal-card glass-panel auth-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge"><i class="fa-solid fa-circle-user"></i></div>
+          <div>
+            <h3>Boutique Login</h3>
+            <p>Access as Store Owner, Store Manager, or Customer</p>
+          </div>
+        </div>
+        <button class="modal-close-btn glass-btn-icon" onclick="app.closeAuthModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Auth Tab Switcher -->
+      <div class="auth-tabs glass-panel-sm">
+        <button class="auth-tab active" data-tab="login" onclick="app.switchAuthTab('login')">
+          <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+        <button class="auth-tab" data-tab="signup" onclick="app.switchAuthTab('signup')">
+          <i class="fa-solid fa-user-plus"></i> Customer Sign Up
+        </button>
+        <button class="auth-tab" data-tab="demo" onclick="app.switchAuthTab('demo')">
+          <i class="fa-solid fa-wand-sparkles"></i> 1-Click Demo
+        </button>
+      </div>
+
+      <!-- Tab 1: Standard Login Form -->
+      <form id="loginForm" class="auth-form-content">
+        <div class="form-group">
+          <label for="loginEmail">Email Address / Username:</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="text" id="loginEmail" class="glass-input" required placeholder="e.g. owner@crocheboutique.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginPassword">Password:</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="loginPassword" class="glass-input" required placeholder="Enter password">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loginRoleSelect">Login As Role:</label>
+          <select id="loginRoleSelect" class="glass-select">
+            <option value="owner">Store Owner (Full Upload & Catalog Access)</option>
+            <option value="manager">Store Manager (Upload & Inventory Access)</option>
+            <option value="customer" selected>Customer (Browse, Wishlist, Cart & Orders)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-primary glass-btn-primary full-width">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Secure Sign In
+        </button>
+      </form>
+
+      <!-- Tab 2: Customer Signup Form -->
+      <form id="signupForm" class="auth-form-content hidden">
+        <div class="form-group">
+          <label for="signupName">Full Name:</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="signupName" class="glass-input" required placeholder="Priya Patel">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email Address:</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="signupEmail" class="glass-input" required placeholder="priya@example.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Create Password:</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="signupPassword" class="glass-input" required placeholder="Choose a secure password">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary glass-btn-primary full-width">
+          <i class="fa-solid fa-user-check"></i> Register as Customer
+        </button>
+      </form>
+
+      <!-- Tab 3: Instant 1-Click Demo Logins -->
+      <div id="demoAuthContent" class="auth-form-content hidden">
+        <p class="demo-intro-text">Click any demo persona to immediately test role-based features without typing:</p>
+        
+        <div class="demo-card-grid">
+          <!-- Persona 1: Owner -->
+          <div class="demo-card glass-panel-sm" onclick="app.loginAsDemo('owner')">
+            <div class="demo-card-header">
+              <span class="role-icon-crown"><i class="fa-solid fa-crown"></i></span>
+              <div>
+                <strong>Store Owner</strong>
+                <small>owner@crocheboutique.com</small>
+              </div>
+            </div>
+            <p>Access 50-image batch uploader, catalog manager, price editing & full store administration.</p>
+            <button class="btn-primary glass-btn-primary btn-sm full-width">Login as Owner</button>
+          </div>
+
+          <!-- Persona 2: Manager -->
+          <div class="demo-card glass-panel-sm" onclick="app.loginAsDemo('manager')">
+            <div class="demo-card-header">
+              <span class="role-icon-manager"><i class="fa-solid fa-user-gear"></i></span>
+              <div>
+                <strong>Store Manager</strong>
+                <small>manager@crocheboutique.com</small>
+              </div>
+            </div>
+            <p>Access image uploading (up to 50 pics limit), inventory management, and custom order requests.</p>
+            <button class="glass-btn btn-sm full-width">Login as Manager</button>
+          </div>
+
+          <!-- Persona 3: Customer -->
+          <div class="demo-card glass-panel-sm" onclick="app.loginAsDemo('customer')">
+            <div class="demo-card-header">
+              <span class="role-icon-customer"><i class="fa-solid fa-heart"></i></span>
+              <div>
+                <strong>Customer / Shopper</strong>
+                <small>customer@example.com</small>
+              </div>
+            </div>
+            <p>Browse products, save wishlist, add to cart, and checkout custom handcrafted orders.</p>
+            <button class="glass-btn btn-sm full-width">Login as Customer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. SHOPPING CART SLIDE-OUT DRAWER (GLASSMORPHISM) -->
+  <div class="drawer-overlay hidden" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer glass-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <div class="drawer-title-wrap">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h3>Your Shopping Bag</h3>
+        <span class="cart-items-pill" id="cartItemsBadge">0 items</span>
+      </div>
+      <button class="glass-btn-icon" id="closeCartBtn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-wrap glass-panel-sm">
+      <div class="progress-labels">
+        <span id="shippingProgressLabel"><i class="fa-solid fa-truck-fast"></i> Add ₹500 more for Free Worldwide Shipping!</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="shippingProgressBar" style="width: 35%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Rendered dynamically -->
+    </div>
+
+    <!-- Empty Cart State -->
+    <div class="empty-cart-view hidden" id="emptyCartView">
+      <i class="fa-solid fa-basket-shopping empty-cart-icon"></i>
+      <h4>Your Shopping Bag is Empty</h4>
+      <p>Explore our handcrafted crochet bags, cozy scarves, and baby outfits!</p>
+      <button class="btn-primary glass-btn-primary" onclick="app.closeCart(); location.href='#shop'">
+        Start Shopping
+      </button>
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-footer glass-panel-sm" id="cartFooter">
+      <div class="coupon-box">
+        <input type="text" id="couponCodeInput" class="glass-input" placeholder="Promo code (e.g. CROCHE10)">
+        <button class="glass-btn-sm" onclick="app.applyCoupon()">Apply</button>
+      </div>
+
+      <div class="cart-summary-rows">
+        <div class="summary-row">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div class="summary-row discount-row hidden" id="discountRow">
+          <span>Special Discount:</span>
+          <span id="cartDiscount">-₹0</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Shipping:</span>
+          <span id="cartShipping">Calculated</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>Total:</span>
+          <span id="cartTotal" class="total-price">₹0</span>
+        </div>
+      </div>
+
+      <div class="cart-checkout-actions">
+        <button class="btn-primary glass-btn-primary full-width" onclick="app.proceedCheckout()">
+          <i class="fa-solid fa-lock"></i> Checkout via WhatsApp / DM
+        </button>
+        <button class="glass-btn full-width text-sm" onclick="app.orderViaInstagramDM()">
+          <i class="fa-brands fa-instagram"></i> Direct DM Order on @croche_boutiq
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 3. WISHLIST MODAL -->
+  <div class="modal-overlay hidden" id="wishlistModal">
+    <div class="modal-card glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge"><i class="fa-solid fa-heart"></i></div>
+          <div>
+            <h3>Your Saved Wishlist</h3>
+            <p>Handmade favorites you love</p>
+          </div>
+        </div>
+        <button class="modal-close-btn glass-btn-icon" onclick="app.closeWishlistModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="wishlist-grid" id="wishlistGrid">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="empty-state hidden" id="emptyWishlist">
+        <i class="fa-regular fa-heart empty-icon"></i>
+        <h4>Your Wishlist is Empty</h4>
+        <p>Click the heart icon on any crochet creation to save it here!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. QUICK VIEW PRODUCT DETAILS MODAL -->
+  <div class="modal-overlay hidden" id="quickViewModal">
+    <div class="modal-card glass-panel quick-view-card">
+      <button class="modal-close-btn glass-btn-icon corner-close" onclick="app.closeQuickView()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="quick-view-grid" id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
